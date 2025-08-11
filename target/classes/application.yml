@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:habitdb}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  main:
+    allow-circular-references: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:ChangeThisSecretInProd}
+    expiration-ms: 86400000
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
