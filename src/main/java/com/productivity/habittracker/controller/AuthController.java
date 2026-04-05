@@ -1,8 +1,8 @@
 package com.productivity.habittracker.controller;
 
-import com.productivity.habittracker.config.JwtUtils;
 import com.productivity.habittracker.dto.AuthRequest;
 import com.productivity.habittracker.dto.AuthResponse;
+import com.productivity.habittracker.service.JwtService;
 import com.productivity.habittracker.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,12 +18,12 @@ public class AuthController {
 
     private final AuthenticationManager authenticationManager;
     private final UserService userService;
-    private final JwtUtils jwtUtils;
+    private final JwtService jwtService;
 
-    public AuthController(AuthenticationManager authenticationManager, UserService userService, JwtUtils jwtUtils) {
+    public AuthController(AuthenticationManager authenticationManager, UserService userService, JwtService jwtService) {
         this.authenticationManager = authenticationManager;
         this.userService = userService;
-        this.jwtUtils = jwtUtils;
+        this.jwtService = jwtService;
     }
 
     @PostMapping("/register")
@@ -36,7 +36,7 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@Valid @RequestBody AuthRequest req) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(req.getEmail(), req.getPassword()));
-        var token = jwtUtils.generateToken(req.getEmail());
+        var token = jwtService.generateToken(req.getEmail());
         return ResponseEntity.ok(new AuthResponse(token));
     }
 
