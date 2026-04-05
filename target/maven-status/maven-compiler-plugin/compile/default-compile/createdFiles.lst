@@ -7,7 +7,6 @@ com/productivity/habittracker/config/JwtAuthenticationFilter.class
 com/productivity/habittracker/model/User.class
 com/productivity/habittracker/service/UserService.class
 com/productivity/habittracker/controller/AuthController.class
-com/productivity/habittracker/config/JwtUtils.class
 com/productivity/habittracker/repository/UserRepository.class
 com/productivity/habittracker/HabitTrackerApplication.class
 com/productivity/habittracker/controller/HabitController.class

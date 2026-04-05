@@ -1,6 +1,5 @@
 /Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/HabitTrackerApplication.java
 /Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/config/JwtAuthenticationFilter.java
-/Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/config/JwtUtils.java
 /Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/config/SecurityConfig.java
 /Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/controller/AuthController.java
 /Users/shivanialwal/Interests/SoftwareWork/LetsGetToWorkAug2025/habit-tracker-backend/src/main/java/com/productivity/habittracker/controller/HabitController.java
